@@ -3,8 +3,33 @@ import React from 'react';
 import './contact.css';
 
 
+class Contact extends React.Component {
+    constructor(props){
+        super(props);
+        this.state ={
+            online:false,
+        };
+    }
 
-const Contact = props => {
+  render() {  return (
+        <div className ="Contact">
+            <img src = {this.props.avatar} className="avatar" alt ="avatar"/>
+            <div>
+                <h4 className= "name">{this.props.name}</h4> 
+                <div className = "status" onClick={event => {
+                const newOnline = !this.state.online;
+                this.setState({ online: newOnline });
+              }}>
+                <span className={this.state.online ? 'status-online' : 'status-offline'}></span>
+                <p className = "status-text">{ this.state.online ? "online":"offline"}</p>   
+                </div>
+            </div>
+        </div>
+      
+    );
+  }
+}
+/*const Contact = props => {
     return (
         <div className ="Contact">
             <img src = {props.avatar} className="avatar" alt ="avatar"/>
@@ -18,7 +43,7 @@ const Contact = props => {
         </div>
       
     );
-  }
+  }*/
   
 
  Contact.propTypes = {
