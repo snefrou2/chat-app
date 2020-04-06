@@ -1,6 +1,6 @@
 
 const Users = [
-     {
+   {
     name : "Arielle Sirène",
     avatar : 'https://media.cultura.com/media/catalog/product/cache/1/image/1000x1000/9df78eab33525d08d6e5fb8d27136e95/c/a/canevas-12x12-ariel-8435282505738_1.jpg?t=1509811988',
     online : false
@@ -28,4 +28,5 @@ const Users = [
     online : true
   }
 ]
+
 export default Users;
